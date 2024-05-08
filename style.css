@@ -1,0 +1,721 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Comfortaa", sans-serif;
+}
+
+html{
+    scroll-padding-top: 90px;
+    scroll-behavior: smooth;
+}
+
+/* Estilo do Header */
+
+header{
+    position: fixed;
+    width: 100%;
+    background-color: #1b1b1b;
+    z-index: 999;
+    
+}
+
+.logo h2{
+    font-size: 35px;
+    font-family: "Righteous", sans-serif;
+    color: white;
+}
+
+header .menu-container{
+    
+    padding: 20px 2%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.menu-desktop ul{
+    display: flex;
+    list-style-type: none;
+}
+
+.menu-desktop li a {
+    text-decoration: none;
+    padding: 0 50px 0 10px;
+    font-weight: 500;
+    color: #fff;
+    text-transform: uppercase;
+    position: relative;
+    font-size: 18px;
+}
+
+.menu-desktop li a:after{
+    content: "";
+    position: absolute;
+    background-color: #fff;
+    height: 3px;
+    width: 0;
+    left: 0;
+    bottom: -3px;
+    transition: 0.3s;
+}
+
+.menu-desktop a:hover:after{
+    width: 80%;
+}
+
+button.btn-menu{
+    width: 50px;
+    height: 50px;
+    background: transparent;
+    outline: none;
+    cursor: pointer;
+    border: 2px solid #fff;
+    transition: .2s;
+    display: none;
+}
+
+button.btn-menu.ativar{
+    border: 2px solid red;
+}
+
+button.btn-menu.ativar .linha:nth-child(1){
+    transform: translateY(8px) rotate(-45deg);
+    background-color: red;
+}
+
+button.btn-menu.ativar .linha:nth-child(3){
+    transform: translateY(-8px) rotate(45deg);
+    background-color: red;
+}
+
+button.btn-menu.ativar .linha:nth-child(2){
+   width: 0;
+}
+
+.linha{
+    position: relative;
+    height: 3px;
+    width: 25px;
+    background-color: #fff;
+    display: block;
+    margin: 5px auto;
+    transform-origin: center;
+    transition: .2s;
+}
+
+.menu-mobile{
+    background-color: #0000008c;
+    backdrop-filter: blur(8px);
+    position: absolute;
+    top: 83px;
+    left: 0;
+    width: 100%;
+    height: 0;
+    transition: .5s;
+    text-align: right;
+    visibility: hidden;
+    overflow: hidden;
+}
+
+.menu-mobile ul li {
+    padding: 40px 30px;
+    
+}
+
+.menu-mobile li a{
+    color: #000000ce;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 16pt;
+    padding: 20px 20px;
+    background-color: white;
+    transition: .5s;
+    border-radius: 30px;
+}
+
+.menu-mobile li a:hover{
+    background-color: #000000ce;
+    color: white
+}
+
+
+.btn-contato a{
+    background-color: #1b1b1b;
+    padding: 10px 20px;
+    cursor: pointer;
+    color: #fff;
+    border: 1px solid #fff;
+    text-transform: uppercase;
+    border-radius: 50px;
+    transition: 0.3s;
+    text-decoration: none;
+   
+    
+}
+
+.btn-contato a:hover{
+    background-color: #fff;
+    border: 1px solid #fff;
+    color: black;
+    font-weight: 500;
+    
+}
+
+/* Estilo da Home */
+
+section.home{
+    width: 100%;
+    height: 100vh;
+    padding: 200px 2%;
+    border-bottom: 1px solid #1b1b1b;
+    background-image: url(images/fundo-branco.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+}
+
+.home-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 2%;
+    width: 100%;
+    
+}
+
+.home-texto h2{
+    font-size: 50px;
+    padding: 0 30px;
+}
+
+.home-texto span{
+    color: blue;
+}
+
+.home-container .perfil{
+    width: 430px;
+    height: 450px;
+    max-width: 100%;
+}
+
+.home-container .perfil img{
+    width: 100%;
+    height: 100%;
+}
+
+.home-social{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+}
+
+.icon-social i{
+    padding: 10px 20px;
+    font-size: 30px;
+    background-color: #1b1b1b;
+    color: #fff;
+    border-radius: 50px;
+    transition: .3s;
+}
+
+.icon-social i:hover{
+    background-color: #fff;
+    color: black;
+    border: 2px solid black;
+}
+
+.btn-sobre{
+    text-align: center;
+    padding: 50px 0;
+}
+
+.btn-sobre .sobreMim {
+    background-color: #1b1b1b;
+    padding: 10px 30px;
+    border-radius: 50px;
+    cursor: pointer;
+
+}
+
+.btn-sobre a{
+    color: #fff;
+    text-decoration: none;
+    transition: .3s;
+    
+}
+
+.btn-sobre a:hover{
+    color: black;
+    background-color: #fff;
+    border: 2px solid black;
+}
+
+/* Estilo do Sobre */
+
+section.sobre{
+    height: 110vh;
+    width: 100%;
+    padding: 118px 2%;
+    border-bottom: 1px solid black;
+}
+
+.sobre-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 1100px;
+}
+
+.sobre-texto h2{
+    font-size: 27px;
+    padding: 20px 0;
+}
+
+.sobre-texto p{
+    line-height: 22px;
+    max-width: 800px;
+    font-weight: 500;
+}
+
+/* Estilo das Habilidades */
+
+.habil{
+    width: 100%;
+    text-align: center;
+    padding: 30px 0;
+}
+
+.habil h2{
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.card-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 40px;
+}
+
+.card-hab{
+    background-color: #fff;
+    text-align: center;
+    width: 160px;
+    border-radius: 20px;
+    padding: 30px 0;
+    position: relative;
+    top: 20px;
+    border: 2px solid #1b1b1b;
+   
+}
+
+.card-logo{
+    font-size: 40px;
+}
+
+/* Estilo da seção de projetos */
+
+section.project{
+    height: 80vh;
+    padding: 60px 0;
+    width: 100%;
+    border-bottom: 1px solid black;
+}
+
+section.project h2{
+    text-align: center;
+    font-size: 30px;
+}
+
+.slide-container{
+   width: 100%;
+   padding: 20px 2%;
+   max-width: 100%;
+}
+
+.swiper{
+    width: 1000px;
+    height: 100%;
+}
+
+.swiper-pagination{
+    position: absolute;
+    top: 450px !important;
+}
+
+.swiper-pagination-bullet{
+    width: 15px !important;
+    height: 15px !important;
+}
+
+.swiper-pagination-bullet-active{
+    background-color: black !important;
+}
+
+
+.card {
+    width: 310px;
+    height: 390px !important;
+    border: 2px solid #1b1b1b;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 30px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1) ;
+    margin: 20px 0;
+    
+}
+.card .card-content .image{
+    width: 310px;
+    height: 240px;
+    padding: 30px;
+}
+
+.card .card-content .image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.card-content .card-text h2{
+    font-size: 24px;
+    text-transform: uppercase;
+}
+
+.card-content .card-text p{
+    padding: 20px;
+    text-align: center;
+}
+
+.card-btn{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    max-width: 290px;
+}
+
+.card-btn a{
+    padding: 10px 10px;
+    border-radius: 10px;
+    background-color: #fff;
+    border: 2px solid #1b1b1b;
+    transition: .3s;
+    text-decoration: none;
+    color: #1b1b1b;
+    font-size: 14px;
+    text-transform: uppercase;
+    transition: .3s;
+}
+
+
+
+.card-btn a:hover{
+    background-color: #1b1b1b;
+    border: 2px solid #ccc;
+    color: #fff;
+}
+
+/* Estilo da seção de contato */
+
+section.contato{
+    height: 86vh;
+    width: 100%;
+    padding: 30px 2%;
+}
+
+section.contato h2{
+    text-align: center;
+}
+
+.form-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60vh;
+}
+
+.form-content{
+    padding: 3rem;
+    background-color: #1b1b1b;
+    min-width: 50%;
+    border-radius: 10px;
+    margin-top: 50px;
+}
+
+.span-required{
+    display: none;
+    font-size: 12px;
+    margin: 3px 0 0 1px;
+    color: red;
+}
+
+.form-content form{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.inputs{
+    padding: 10px 7px;
+    outline: none;
+    width: 100%;
+    border-radius: 10px;
+    transition: .3s;
+}
+
+.inputs:focus{
+    background-color: #1b1b1b;
+    border: 2px solid #fff;
+    color: #fff;
+}
+
+textarea{
+    width: 100%;
+    resize: none;
+    padding: 8px;
+    outline: none;
+    transition: .3s;
+    border-radius: 10px;
+}
+
+textarea:focus{
+    background-color: #1b1b1b;
+    border: 2px solid #fff;
+    color: #fff;
+}
+
+.form-content form button{
+    background-color: #fff;
+    padding: 10px 10px;
+    border-radius: 40px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.form-content form button:hover{
+    background-color: #1b1b1b;
+    color:#fff ;
+    border: 2px solid #fff;
+}
+
+footer{
+    background-color: #1b1b1b;
+    height: 20vh;
+    border-top: 1px solid #fff;
+}
+
+footer .footer-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 20vh;
+}
+
+.footer-container p{
+    color: #fff;
+    font-size: 18px;
+}
+
+.footer-container .icon-footer i{
+    padding: 10px 10px;
+    font-size: 30px;
+    background-color: #fff;
+    color: #1b1b1b;
+    border-radius: 50px;
+    transition: .3s;
+}
+
+.icon-footer i:hover{
+    background-color: #1b1b1b;
+    color: #fff;
+    border: 2px solid #fff;
+}
+
+@media screen and (max-width: 999px ) {
+    .home-container .perfil{
+        display: none;
+    }
+
+    .home-texto h2{
+        text-align: center;
+    }
+
+    .home-social{
+        padding: 60px 0;
+    }
+
+    .slide-container{
+        max-width: 660px;
+        margin: 50px 0;
+    }
+
+    .form-content{
+        width: 90%;
+        height: 80%;
+    }
+
+}
+
+@media screen and (max-width: 768px){
+    .home-container .perfil{
+        display: none;
+    }
+
+    .home-texto h2{
+        text-align: center;
+    }
+
+    .home-social{
+        padding: 60px 0;
+    }
+
+    .icon-social i{
+        padding: 15px 25px;
+        margin-left: 10px;
+    }
+
+    .btn-sobre .sobreMim {
+        padding: 20px 40px;
+    }
+
+    .sobre-texto h2{
+        text-align: center;
+        font-size: 34px;
+    }
+
+    .sobre-texto p{
+       max-width: 650px;
+       text-align: center;
+    }
+
+    .card-container{
+        display: grid;
+        grid-template-rows: 60px 60px;
+        grid-template-columns: 10px 130px;
+        gap: 80px;
+        align-items: center;
+    }
+
+    .slide-container{
+        max-width: 660px;
+        margin: 50px 0;
+    }
+
+    .form-content{
+        width: 90%;
+        height: 100%;
+    }
+
+    .form-content form{
+        gap: 3rem;
+        margin-top: 20px;
+    }
+}
+
+
+
+ @media screen and (max-width: 676px) {
+    .menu-desktop{
+        display: none;
+    }
+
+    button.btn-menu{
+        display: block;
+    }
+
+    .menu-mobile.abrir{
+        visibility: visible;
+        height: calc(100vh - 83px);
+    }
+
+    .btn-contato{
+        display: none;
+    } 
+    .home-texto h2{
+        font-size: 55px;
+    }
+
+    .sobre-texto{
+        max-width: 600px;
+    }
+
+    .slide-container{
+        max-width: 630px;
+    }
+
+    .card .card-content .image{
+        width: 290px;
+        height: 220px;
+        padding: 30px;
+    }
+
+   
+} 
+
+@media screen and (max-width: 646px) {
+    html{
+        overflow-x: hidden;
+    }
+
+    .slide-container{
+        max-width: 600px;
+    }
+
+     .card .card-content .image:nth-child(1){
+        position: relative;
+        right: 5px;
+    } 
+}
+
+
+
+@media screen and (max-width: 600px) {
+    .slide-container{
+        max-width: 500px;
+    }
+
+    .card-content{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .card .card-content .image{
+        width: 100%;
+    }
+
+    .card-btn a {
+        margin: 0 20px;
+    }
+
+
+}
+
+@media screen and (max-width: 570px)  {
+    section.sobre{
+        padding: 50px 2%;
+    }
+
+    .sobre-texto P{
+        max-width: 500px;
+    }
+
+    footer .footer-container{
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 517px) {
+    .slide-container{
+        max-width: 460px;
+    }
+
+    .card-container{
+        grid-template-columns: 50px 130px;
+    }
+}

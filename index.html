@@ -1,0 +1,232 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOB Portfólio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+
+    <!--Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Righteous&display=swap" rel="stylesheet">
+
+<!--Icons-->
+<script src="https://kit.fontawesome.com/99d1235829.js" crossorigin="anonymous"></script>
+
+<!--SwiperCSS-->
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+
+<link rel="shortcut icon" href="images/LOB .png" type="image/x-icon">
+
+
+</head>
+<body>
+    <header><!--Header-->
+        <div class="menu-container"><!--Header-->
+            <div class="logo"><h2>LOB.</h2></div><!--logo-->
+            <div class="menu-desktop"><!--menu-desktop-->
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#project">Projetos</a></li>
+                </ul>
+            </div>
+
+            <button onclick="animar()" class="btn-menu" id="btn-menu">
+                <span class="linha"></span>
+                <span class="linha"></span>
+                <span class="linha"></span>
+            </button>
+
+             <div class="menu-mobile" id="menu-mobile">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#project">Projetos</a></li>
+                </ul>
+            </div> 
+            <div class="btn-contato"><!--btn-contato-->
+                <a href="#contato" class="btn">Contato</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="home" id="home"><!--home-->
+        <div class="home-container"><!--home-container-->
+            <div class="home-texto"><!--home-texto-->
+                <h2>Olá, <br>Meu nome é <span>Leonardo</span>, <br>um <span>Desenvolvedor Front-End</span></h2>
+            </div>
+            <div class="perfil"><img src="images/Avatar-Maker.png"></div><!--perfil-->
+        </div>
+        <div class="home-social"><!--home-social-->
+            <div class="icon-social"><!--icon-social-->
+            <a href="#"><i class="fa-brands fa-github"></i></a>
+            <a href="#"><i class="fa-brands fa-telegram"></i></a>
+        </div>
+        </div>
+
+        <div class="btn-sobre"><!--btn-sobre-->
+            <a href="#contato" class="sobreMim">Contato</a>
+        </div>
+    </section>
+
+    <section class="sobre" id="sobre"><!--s-sobre-->
+        <div class="sobre-container"><!--sobre-container-->
+            <div class="sobre-texto"><!--sobre-texto-->
+                <h2>Sobre Mim</h2>
+                <p>Olá, sou Leonardo e tenho 16 anos, sou um estudante do Ensino Médio e aluno da instituição SENAI.
+                    Desde cedo eu já fui apresentado ao mundo da tecnologia, com os jogos, aplicativos e websites.
+                    <br>
+                    <br>
+                    Foi pela área Web que fiquei bastante interessado e pela busca sobre como eram feitos, eu descobri a programação 
+                    e desde então fiquei ainda mais interessado e mergulhei nesse mundo, querendo aprender diversas linguagens e criar novos projetos.
+                    <br>
+                    <br>
+                    Por mais que eu ainda seja um estudante, eu já desenvolvi uma sólida compreensão em HTML e CSS, ainda estou desenvolvendo minhas habilidades em
+                    JavaScript e estou disposto a aprender mais sobre outras linguagens como PHP e Python. Também estou aprendendo mais desde que eu entrei no curso
+                    de Desenvolvimento de Sistemas do SENAI, o que foi um estímulo a mais para desenvolver mais habilidades.
+                    <br>
+                    <br>
+                    Além da Programação, tenho interesse em áreas como Desevolvimento de Jogos e Inteligência Artificial. Estou sempre em busca de novas maneiras de
+                    expandir meu conhecimento e explorar novas tecnologias.
+                </p>
+            </div>
+           
+        </div>
+
+        <div class="habil"><!--habil-->
+            <h2>Habilidades</h2>
+            <div class="card-container"><!--card-container-->
+                <div class="card-hab"><!--card-hab-->
+                    <div class="card-logo"><i class="fa-brands fa-html5"></i></div><!--card-logo-->
+                    <h3>HTML</h3>
+                </div>
+
+                <div class="card-hab"><!--card-hab-->
+                    <div class="card-logo"><i class="fa-brands fa-css3-alt"></i></div><!--card-logo-->
+                    <h3>CSS</h3>
+                </div>
+
+                <div class="card-hab"><!--card-hab-->
+                    <div class="card-logo"><i class="fa-brands fa-js"></i></div><!--card-logo-->
+                    <h3>JavaScript</h3>
+                </div>
+
+                <div class="card-hab"><!--card-hab-->
+                    <div class="card-logo"><i class="fa-regular fa-clock"></i></div><!--card-logo-->
+                    <h3>Em breve</h3>
+                </div>
+
+                
+            </div>
+        </div>
+    </section>
+
+    <section class="project" id="project"><!--project-->
+        <h2>Projetos</h2>
+        <div class="slide-container swiper mySwiper"><!--slider-container-->
+            <div class="slide-content">
+                <div class="slide-wrapper swiper-wrapper"><!--slide-wrapper-->
+                    <div class="swiper-slide card"><!--card-->
+                        <div class="card-content"><!--card-content-->
+                            <div class="image"><img src="images/breve.jpg"></div><!--image-->
+                            <div class="card-text"><!--card-text-->
+                                <h2>Projeto 1</h2>
+                                <p>Projeto tal, feito com linguagem tal e tal, com o intuito tal</p>
+                            </div>
+                            <div class="card-btn"><!--card-btn-->
+                                <a href="">Repositório</a>
+                                <a href="">Site</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card swiper-slide"><!--card-->
+                        <div class="card-content"><!--card-content-->
+                            <div class="image"><img src="images/breve.jpg"></div><!--image-->
+                            <div class="card-text"><!--card-text-->
+                                <h2>Projeto 2</h2>
+                                <p>Projeto tal, feito com linguagem tal e tal, com o intuito tal</p>
+                            </div>
+                            <div class="card-btn"><!--card-btn-->
+                                <a href="">Repositório</a>
+                                <a href="">Site</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card swiper-slide"><!--card-->
+                        <div class="card-content"><!--card-content-->
+                            <div class="image"><img src="images/breve.jpg"></div><!--image-->
+                            <div class="card-text"><!--card-text-->
+                                <h2>Projeto 3</h2>
+                                <p>Projeto tal, feito com linguagem tal e tal, com o intuito tal</p>
+                            </div>
+                            <div class="card-btn"><!--card-btn-->
+                                <a href="">Repositório</a>
+                                <a href="">Site</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card swiper-slide"><!--card-->
+                        <div class="card-content"><!--card-content-->
+                            <div class="image"><img src="images/breve.jpg"></div><!--image-->
+                            <div class="card-text"><!--card-text-->
+                                <h2>Projeto 4</h2>
+                                <p>Projeto tal, feito com linguagem tal e tal, com o intuito tal</p>
+                            </div>
+                            <div class="card-btn"><!--card-btn-->
+                                <a href="">Repositório</a>
+                                <a href="">Site</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>   
+            </div>
+          <div class="swiper-pagination"></div><!--swiper-pagination-->
+        </div>
+    </section>
+
+    <section class="contato" id="contato"><!--contato-->
+        <h2>Entre em contato</h2>
+        <div class="form-container"><!--form-container-->
+            <div class="form-content"><!--form-content-->
+                <form  action="https://formsubmit.co/leonardodeveloper200@gmail.com" method="POST">
+                    <div>
+                        <input type="text" name="name" placeholder="Digite seu Nome" class="inputs required" oninput="nameValidate()">
+                        <span class="span-required">Seu nome deve ter no mínimo 8 caracteres</span>
+                    </div>
+                    <div>
+                        <input type="email" name="email" placeholder="Digite seu E-mail" class="inputs required" oninput="emailValidate()">
+                        <span class="span-required">Digite um E-mail válido</span>
+                    </div>
+                    <textarea name="mensagem" id="mensagem" cols="25" rows="10" placeholder="Deixe uma Mensagem"></textarea>
+
+                    <button  type="submit">Enviar</button>
+
+                    <input type="hidden" name="_next" value="http://127.0.0.1:5500/obrigado.html">
+                    <input type="hidden" name="_captcha" value="false">
+                </form>
+                </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-container">
+            <p>Todos os direitos reservados @2024</p>
+            <div class="icon-footer">
+                <a href="#"><i class="fa-brands fa-github"></i></a>
+                <a href="#"><i class="fa-brands fa-telegram"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+</body>
+</html>
