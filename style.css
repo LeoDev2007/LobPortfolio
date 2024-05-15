@@ -173,6 +173,10 @@ section.home{
     background-image: url(images/fundo-branco.jpg);
     background-size: cover;
     background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
     
 }
 
@@ -257,14 +261,16 @@ section.home{
 section.sobre{
     height: 110vh;
     width: 100%;
-    padding: 118px 2%;
+    padding: 0 2%;
     border-bottom: 1px solid black;
+    display: grid;
+    
 }
 
 .sobre-container{
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
     flex-wrap: wrap;
     max-width: 1100px;
 }
@@ -285,7 +291,7 @@ section.sobre{
 .habil{
     width: 100%;
     text-align: center;
-    padding: 30px 0;
+    padding: 20px 0;
 }
 
 .habil h2{
@@ -323,6 +329,8 @@ section.project{
     padding: 60px 0;
     width: 100%;
     border-bottom: 1px solid black;
+    display: grid;
+    gap: 30px;
 }
 
 section.project h2{
@@ -334,6 +342,7 @@ section.project h2{
    width: 100%;
    padding: 20px 2%;
    max-width: 100%;
+
 }
 
 .swiper{
@@ -422,9 +431,10 @@ section.project h2{
 /* Estilo da seção de contato */
 
 section.contato{
-    height: 86vh;
+    height: 70vh;
     width: 100%;
-    padding: 30px 2%;
+    padding: 40px 2%; 
+    
 }
 
 section.contato h2{
@@ -435,13 +445,13 @@ section.contato h2{
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 60vh;
+    height: 50vh;
 }
 
 .form-content{
     padding: 3rem;
     background-color: #1b1b1b;
-    min-width: 50%;
+    min-width: 45%;
     border-radius: 10px;
     margin-top: 50px;
 }
@@ -536,6 +546,16 @@ footer .footer-container{
 }
 
 @media screen and (max-width: 999px ) {
+
+    section.home{
+        height: 100vh;
+      
+    }
+
+    section.sobre{
+        height: 95vh;
+    }
+
     .home-container .perfil{
         display: none;
     }
@@ -556,6 +576,19 @@ footer .footer-container{
     .form-content{
         width: 90%;
         height: 80%;
+    }
+
+    .form-container{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 75%;
+    }
+
+    textarea:focus{
+        background-color: #1b1b1b;
+        
+        color: #fff;
     }
 
 }
@@ -605,13 +638,17 @@ footer .footer-container{
         margin: 50px 0;
     }
 
+    .form-container{
+        height: 90%;
+    }
+
     .form-content{
         width: 90%;
         height: 100%;
     }
 
     .form-content form{
-        gap: 3rem;
+        gap: 2rem;
         margin-top: 20px;
     }
 }
@@ -619,6 +656,8 @@ footer .footer-container{
 
 
  @media screen and (max-width: 676px) {
+
+ 
     .menu-desktop{
         display: none;
     }
@@ -699,11 +738,25 @@ footer .footer-container{
 @media screen and (max-width: 570px)  {
     section.sobre{
         padding: 50px 2%;
+        height: 100%;
     }
 
-    .sobre-texto P{
+    .sobre-texto p{
         max-width: 500px;
+        font-size: 16px;
+        padding: 0 2%;
     }
+
+    .card-hab{
+        width: 130px;
+        padding: 25px 0;
+       
+    }
+
+    .form-content form{
+        gap: 1rem;
+    }
+
 
     footer .footer-container{
         flex-direction: column;
@@ -711,11 +764,19 @@ footer .footer-container{
 }
 
 @media screen and (max-width: 517px) {
+    .home-texto{
+        position: relative;
+        top: 50px;
+    }
+    .home-texto h2{
+        font-size: 38px;
+        width: 100%;
+    }
     .slide-container{
-        max-width: 460px;
+        max-width: 400px;
     }
 
     .card-container{
-        grid-template-columns: 50px 130px;
+        grid-template-columns: 100px 130px;
     }
 }
